@@ -26,6 +26,9 @@ jobs:
         if: steps.cache-mv-cli.outputs.cache-hit != 'true'
         run: |
           cargo install mv-cli@0.3.2 --features address20
+      - name: Move ver
+        run: /
+          move --version
       - name: Run Test
         run: |
           cargo test
