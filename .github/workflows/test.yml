@@ -29,6 +29,15 @@ jobs:
       - name: Move ver
         run: |
           move --version
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - name: Rust Build
         run: |
           (du -hs ~/.cargo && cargo build)
