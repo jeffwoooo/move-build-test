@@ -10,5 +10,5 @@ fn test_plus() {
 
 #[test]
 fn test_eq() {
-    assert!(3 == 3);
+    assert!(1 == 1);
 }
