@@ -31,7 +31,7 @@ jobs:
           move --version
       - name: Rust Build
         run: |
-          (du -hs ~/.cargo/registry/src && cargo build)
+          (du -hs ~/.cargo && cargo build)
       - name: Run Test
         run: |
-          (du -hs ~/.cargo/registry/src && cargo test)
+          (du -hs ~/.cargo && cargo test)
